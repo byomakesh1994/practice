@@ -1,5 +1,6 @@
 import React, { useCallback, useMemo, useState } from "react";
 import Child from "./Child";
+import Test from "./Test";
 
 const CallbackHook = () => {
   const [count, setCount] = useState(0);
@@ -31,11 +32,12 @@ const CallbackHook = () => {
         <button onClick={Increment}>increment </button>
         <button onClick={Reset}>reset </button>
       </div>
+      <Test />
       <div>
         <h4>Use Memo</h4>
         <h3>Number : {number}</h3>
         <button onClick={() => setShow(!show)}>
-          {show ? "Clicked" : "Unclicked"}{" "}
+          {show ? "Clicked" : "Unclicked"}
         </button>
       </div>
     </>
